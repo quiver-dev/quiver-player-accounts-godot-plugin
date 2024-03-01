@@ -1,6 +1,6 @@
 
 # Quiver Player Accounts
-Quiver Player Accounts allows you to easily player accounts for games using the  [Godot engine](https://godotengine.org). Currently this servive only supports creating guest accounts, but in the future it will allow creating a whole host of accounts, supporting a variety of platforms.
+Quiver Player Accounts allows you to easily player accounts for games using the  [Godot engine](https://godotengine.org). Currently this service only supports creating guest accounts, but in the future it will allow creating a whole host of accounts, supporting a variety of platforms.
 
 ## Features
 * Currently just guest accounts, but a lot more in the future!
@@ -34,7 +34,7 @@ The `PlayerAccounts` autoload is added to your project automatically when you en
 
 To post a score for a guest player account, call:
 
-	PlayerAccounts.register_guest()
+	await PlayerAccounts.register_guest()
 
 The function returns a boolean indicating whether this operation succeeded. Note that this a coroutine, so must be called with the `await` keyword to get the result. When the player has logged in, the `logged_in` signal will be emitted.
 
@@ -58,7 +58,7 @@ This returns a boolean indicating whether the player is logged in.
 
 ### Notes and Limitations
 
-* Currently this only supports tracking scores from guest players, i.e. players with guest players and not players with login credentials. That will change as we launch our full Player Accounts feature in a future update.
+* Quiver Player Accounts only supports guest accounts, i.e. accounts with no login credentials. We'll support more types of accounts in the future.
 
 ### Troubleshooting
 
